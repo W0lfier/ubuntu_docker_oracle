@@ -10,7 +10,7 @@ sudo sh ubuntu_docker_oracle.sh
 
 ## 使用方法
 
-### 开启
+### 开启数据库
 - 执行脚本后自动启动，并开启开机自动启动
 - 手动开启：
 ```
@@ -27,7 +27,7 @@ sudo docker ps
 ```
  ################################
  #                              #
- # oracle数据库连接对应信息:    #
+ # oracle数据库连接对应信息:       #
  #                              #
  # hostname:localhost           #
  #                              #
@@ -39,7 +39,7 @@ sudo docker ps
  #                              #
  # password: oracle             #
  #                              #
- # SYS的密码: oracle            #
+ # SYS的密码: oracle             #
  #                              #
  ################################ 
 ```
