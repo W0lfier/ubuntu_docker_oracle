@@ -5,11 +5,10 @@ apt-get install docker.io
 docker pull wnameless/oracle-xe-11g
 
 # 运行docker下的oracle
- ###############################
  # 			              	
  # oracle数据库连接对应信息:	
  # 			              	
- # hostname:外网ip	              
+ # hostname:localhost  (也可以是外网ip)	              
  # 			        
  # port: 49161		        
  # 			        
@@ -21,11 +20,10 @@ docker pull wnameless/oracle-xe-11g
  # 			        
  # SYS的密码: oracle    	
  #			        
- ###############################
-docker run -h "oracle"  -d -p 49160:22 -p 49161:1521 -p 49162:8080 -e ORACLE_ALLOW_REMOTE=true wnameless/oracle-xe-11g
+docker run -h "oracle" --name "oracle"  -d -p 49160:22 -p 49161:1521 -p 49162:8080 -e ORACLE_ALLOW_REMOTE=true wnameless/oracle-xe-11g
 
 # 添加docker到开机启动
-echo '#!/bin/bash\ndocker run -h "oracle"  -d -p 49160:22 -p 49161:1521 -p 49162:8080 -e ORACLE_ALLOW_REMOTE=true wnameless/oracle-xe-11g' > docker_oracle
+echo '#!/bin/bash\ndocker start oracle' > docker_oracle
 chmod 755 docker_oracle
 sudo mv docker_oracle /etc/init.d
 cd /etc/init.d

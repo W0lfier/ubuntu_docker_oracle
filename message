@@ -1,9 +1,8 @@
 
- ###########################
  # 			    
  # oracle数据库连接对应信息:
  # 			    
- # hostname:外网ip	    
+ # hostname:localhost  (也可以使用外网ip)	    
  # 			    
  # port: 49161		    
  # 			    
@@ -15,4 +14,5 @@
  # 			    
  # SYS的密码: oracle	    
  #			    
- ###########################
+
+本地连接可以直接运行：sudo docker exec -it oracle /bin/bash
